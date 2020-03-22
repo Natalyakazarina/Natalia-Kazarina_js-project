@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- FONTS CSS -->
+
+    <link href="https://fonts.googleapis.com/css?family=Cardo:400,400i,700|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Raleway:300,300i,400,700&display=swap&subset=cyrillic-ext" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+    <!-- STYLE CSS -->
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Natalia Kazarina js course project</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="tabs">
+            <div class="tab whiteborder">Текущие задачи</div>
+            <div class="tab">Выполненные задачи</div>
+            <div class="tab">Удаленные задачи</div>
+            <div class="tabContent current-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Название задания</th>
+                            <th>Описание задания</th>
+                            <th>Приоритет</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-current"></tbody>
+                </table>
+                <form action="#">
+                    <input type="text" class="field required" required placeholder="Название задания" name="task-name" />
+                    <textarea type="text" class="field" placeholder="Описание задания" name="task-description"></textarea>
+                    <select class="field" name="task-priority">
+                        <option value="бессрочное">бессрочное</option>
+                        <option value="триальное">триальное</option>
+                        <option value="срочное">срочное</option>
+                    </select>
+
+                    <button class="add">добавить</button>
+                    <button class="edit">внести изменения в таблицу</button>
+                </form>
+            </div>
+            <div class="tabContent completed-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Название задания</th>
+                            <th>Описание задания</th>
+                            <th>Приоритет</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-completed"></tbody>
+                </table>
+            </div>
+            <div class="tabContent removed-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Название задания</th>
+                            <th>Описание задания</th>
+                            <th>Приоритет</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-removed"></tbody>
+                </table>
+            </div>
+        </div>
+        <script src="data.js"></script>
+        <script src="main.js"></script>
+    </div>
+</body>
+
+</html>
